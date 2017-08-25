@@ -2,19 +2,22 @@
 
 session_start();
 
-if (!isset($_POST['intro']) && !isset($_POST['pw'])) {
+if ( !isset($_POST['intro']) || !isset($_POST['pw']) ) {
     die("<script>alert('입력값이 없습니다.'); location.href='./';</script>");
 }
 
 include("./dbconfig.php");
 $intro = $_POST['intro'];
-$intro = base64_encode($intro);
+$intro = base64_encode($intro);		/* base64 encoding to prevent SQL Injection by removing special characters */
+
 
 $id = $_SESSION['id'];
 $pw = $_POST['pw'];
-$pw = hash('sha512', $pw);
+$pw = hash('sha512', $pw);			/* hash the password */
 
-$query = "SELECT id FROM login WHERE pw=('{$pw}')";
+$query	= "SELECT `id` FROM `login` WHERE `pw` = ( '{$pw}' )";
+$result	= $mysqli->query($query);
+$fetch 	= $
 $result = mysqli_fetch_array($mysqli->query($query));
 
 if ($result['id'] !== $id) {

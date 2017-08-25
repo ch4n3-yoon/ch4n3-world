@@ -1,9 +1,13 @@
 <?php
 
+/* create MySQL cursor */
 include('./dbconfig.php');
-// load chats from mysql DB
+
+
+/* load chat from Database*/
 $query = "SELECT * FROM (SELECT * FROM chat ORDER BY date DESC LIMIT 30) as t ORDER BY date DESC";
 $result = $mysqli->query($query);
+
 
 while ($rows = $result->fetch_array()) {  ?>
 
