@@ -205,7 +205,7 @@ if (isset($_SESSION['id']) && isset($_SESSION['nick'])) {
             while ($rows = $result->fetch_array()) {
                 $i++;
 
-                $db = new mysqli('localhost', 'ch4n3', 'rudska306', 'ch4n3');
+                $db = new mysqli('localhost', '***', 'password', 'ch4n3');
                 $db->set_charset('utf8');
                 $query = "SELECT id FROM solvers WHERE id=('".$_SESSION['id']."') and no=(".$rows['no'].")";
                 $r = mysqli_fetch_array($db->query($query));
