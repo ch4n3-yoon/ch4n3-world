@@ -22,8 +22,7 @@ if(preg_match("/\'|\"|or|and|\||\&/i", $_POST['author'])) {
 }
 
 
-$mysqli = new mysqli("localhost", "ch4n3", "rudska306", "ch4n3");
-$mysqli->set_charset('utf8');
+include('./dbconfig.php');
 
 $query = "INSERT INTO sendProb(probName, probCont, writeUp, field, author, date) VALUES('{$_POST['probName']}'";
 $query .= ", '{$_POST['prob']}', '{$_POST['writeUp']}', '{$_POST['flag']}', NOW())";
