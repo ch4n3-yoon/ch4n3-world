@@ -1,18 +1,17 @@
-
 <!DOCTYPE html>
 <html lang="ko">
 <?php
 
 session_start();
-if(!isset($_SESSION['nick'])) {
+if (!isset($_SESSION['nick'])) {
 	die("<script>alert('login plz'); location.href='./';</script>");
-} else if(!isset($_GET['no']) || $_GET['no']=="") {
-    die("query error..");       //check the value, 'no'
-} else if(preg_match("/#|-|_|;|\(|\n|\)| |\t/", $_GET['no'])) {
-    die("no hack ~_~");         //is hackable to the value, 'no'?
+} else if (!isset($_GET['no']) || $_GET['no'] == "") {
+	die("query error.."); //check the value, 'no'
+} else if (preg_match("/[^0-9]/i", $_GET['no'])) {
+	die("Only digits..");
 }
 
-include('./dbconfig.php');	//$mysqli
+include './dbconfig.php'; //$mysqli
 
 // Check if MySQL has the value, 'no'
 $no = $_GET['no'];
@@ -23,12 +22,12 @@ if (!isset($result['no'])) {
 	die("<script>alert('Query error..');	location.href='./probs.php';	</script>");
 }
 
-$prob = $result['prob'];            //문제명
-$point = $result['point'];          //점수
-$author = $result['author'];        //문제 만든이
-$category = $result['category'];    //문제 카테고리
-$text =  $result['text'];           //문제 부가설명
-$flag = $result['flag'];            //플래그
+$prob = $result['prob']; //문제명
+$point = $result['point']; //점수
+$author = $result['author']; //문제 만든이
+$category = $result['category']; //문제 카테고리
+$text = $result['text']; //문제 부가설명
+$flag = $result['flag']; //플래그
 
 ?>
 	<head>
@@ -76,24 +75,24 @@ $flag = $result['flag'];            //플래그
       </div>
 
       <div class="jumbotron">
-        	<h2 align="left"><?php echo($prob); ?> (<?php echo($category); ?>)</h2>
+        	<h2 align="left"><?php echo ($prob); ?> (<?php echo ($category); ?>)</h2>
 			<br />
 			<!-- Author and point -->
         	<p class="lead" align="left">
-				Created by <b><?php echo($author); ?></b> |
-				You can get <?php echo($point); ?>point!
+				Created by <b><?php echo ($author); ?></b> |
+				You can get <?php echo ($point); ?>point!
 			</p>
 
 			<!-- prob information text -->
 			<hr />
 			<div class="lead" align="left" >
-				<pre style="font-size: 18px;"><?php echo($text); ?></pre>
+				<pre style="font-size: 18px;"><?php echo ($text); ?></pre>
 			</div>
 			<hr />
 			<div class="row">
 	  			<div class="col-lg-6">
 	    			<div class="input-group">
-	      			<input type="text" id="flag" class="form-control" placeholder="ex) ZenK4in0_L0v3_L!vE" size="40">
+	      			<input type="text" id="flag" class="form-control" placeholder="ex) Y0u_g0t_the_f14g!" size="50">
 	      			<span class="input-group-btn">
 	        				<button style="height: 35px; padding-top: 0px;" class="btn btn-secondary" type="button" id="auth">Auth</button>
 	      			</span>
@@ -113,31 +112,32 @@ $flag = $result['flag'];            //플래그
         	<div class="col-lg-6">
 				<?php
 
-				$query = "SELECT COUNT(*) AS solvers FROM solvers WHERE no=($no)";
-				$result = mysqli_fetch_array($mysqli->query($query));
+$query = "SELECT COUNT(*) AS solvers FROM solvers WHERE no=($no)";
+$result = mysqli_fetch_array($mysqli->query($query));
 
-				$solvers = $result['solvers'];
-				if($solvers%2 == 0) {
-					//'$solvers' is even number.
-					$solvers /= 2;
-				} else {
-					//'$solvers' is odd number.
-					$solvers += 1;
-					$solvers /= 2;
-				}
+$solvers = $result['solvers'];
+if ($solvers % 2 == 0) {
+	//'$solvers' is even number.
+	$solvers /= 2;
+} else {
+	//'$solvers' is odd number.
+	$solvers += 1;
+	$solvers /= 2;
+}
 
-				$query = "SELECT * FROM solvers WHERE no=($no) ORDER BY date DESC LIMIT {$solvers}";
-            $result = $mysqli->query($query);
+$query = "SELECT * FROM solvers WHERE no=($no) ORDER BY date DESC LIMIT {$solvers}";
+$result = $mysqli->query($query);
 
-            while($rows = $result->fetch_array()) { ?>
+while ($rows = $result->fetch_array()) {
+	?>
                 <?php
-                //get prob's name
-                $query = "SELECT prob FROM probs WHERE no=({$rows['no']})";
-                $re = mysqli_fetch_array($mysqli->query($query));
-                ?>
-					 <h4><?php echo($rows['nick']) ?></h4>
-	           	<p>solved at <?php echo($rows['date']) ?>.</p>
-            <?php } ?>
+//get prob's name
+	$query = "SELECT prob FROM probs WHERE no=({$rows['no']})";
+	$re = mysqli_fetch_array($mysqli->query($query));
+	?>
+					 <h4><?php echo ($rows['nick']) ?></h4>
+	           	<p>solved at <?php echo ($rows['date']) ?>.</p>
+            <?php }?>
 
 
         	</div>
@@ -146,18 +146,19 @@ $flag = $result['flag'];            //플래그
         	<div class="col-lg-6">
 
 				<?php
-				$query = "SELECT * FROM solvers WHERE no=($no) ORDER BY date DESC LIMIT {$solvers}, {$solvers}";
-				$result = $mysqli->query($query);
+$query = "SELECT * FROM solvers WHERE no=($no) ORDER BY date DESC LIMIT {$solvers}, {$solvers}";
+$result = $mysqli->query($query);
 
-				while($rows = $result->fetch_array()) { ?>
+while ($rows = $result->fetch_array()) {
+	?>
 					 <?php
-					 //get prob's name
-					 $query = "SELECT prob FROM probs WHERE no=({$rows['no']})";
-					 $re = mysqli_fetch_array($mysqli->query($query));
-					 ?>
-					 <h4><?php echo($rows['nick']) ?></h4>
-					<p>solved at <?php echo($rows['date']) ?>.</p>
-				<?php } ?>
+//get prob's name
+	$query = "SELECT prob FROM probs WHERE no=({$rows['no']})";
+	$re = mysqli_fetch_array($mysqli->query($query));
+	?>
+					 <h4><?php echo ($rows['nick']) ?></h4>
+					<p>solved at <?php echo ($rows['date']) ?>.</p>
+				<?php }?>
         	</div>
       </div>
 
@@ -168,7 +169,7 @@ $flag = $result['flag'];            //플래그
 		</div> <!-- /container -->
 	 <script src="./solve_js.js"></script>
 	 <script>
-	 	var no = <?php echo($_GET['no']); ?>
+	 	var no = <?php echo ($_GET['no']); ?>
 	 </script>
   </body>
 </html>
