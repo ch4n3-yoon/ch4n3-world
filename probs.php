@@ -1,16 +1,9 @@
 
 <!DOCTYPE html>
 <?php
-
-include "config.php";
-
-
-
 session_start();
-
-if(!isset($_SESSION['nick']))
-{
-    msg("login please");
+if(!isset($_SESSION['nick'])) {
+    die("<script>alert('login plz'); location.href='./';</script>");
 }
 ?>
 <html lang="ko">

@@ -1,27 +1,14 @@
 <?php
+$conn = mysql_connect('localhost', 'respect', 'pt197080');
 
-/*
- * The config file for ch4n3-world
- *
-*/
+$db_id=mysql_select_db("respect", $conn);
 
-
-/* send alert message */
-function msg($msg, $back=1)
-{
-	if ($back == 1)
-	{
-		echo "<script> 
-				alert('{$msg}'); 
-				history.back(); 
-			</script>";
-	}
-
-	else
-	{
-		echo "<script> alert('{$msg}'); </script>";
-	}
+if($db_id){
+	echo "good";
 }
 
+else {
+	echo "ha";
+}
 
 ?>
