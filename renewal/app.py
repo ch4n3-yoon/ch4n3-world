@@ -2,9 +2,15 @@
 # coding: utf-8
 
 from flask import Flask, render_template, session
+import pymysql.cursors
 
 app = Flask(__name__)
 app.secret_key = "ch4n3isthesecretkey"
+
+conn = pymysql.connect(host='localhost',
+                            user='admin',
+                            password=None,
+                            charset='utf8mb4')
 
 @app.route('/')
 def index():
