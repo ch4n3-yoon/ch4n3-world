@@ -1,0 +1,223 @@
+
+@import url(http://fonts.googleapis.com/earlyaccess/notosanskr.css);
+
+
+div, a, h2, .mdl-button {
+    font-family: 'Noto Sans KR', sans-serif;
+    text-decoration: none;
+    color: inherit;
+}
+
+.backgrounudimagegebabybaby {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0px;
+    left: 0px;
+    z-index: 0;
+    margin-top: 0px;
+    padding: 0;
+    background-size: cover;
+    background-position: 50% 50%;
+    background-repeat: unset;
+    background-image: url('https://raw.githubusercontent.com/hjh010501/ImageHosting/master/1.jpg');
+    z-index: 0;
+    overflow: hidden;
+}
+
+.backgroundoverlay {
+
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background: rgba(20,20,20, 0.90);
+    background: linear-gradient(to bottom right, rgba(40,40,40,0.90), rgba(20,20,20,0.90));
+    background: -webkit-linear-gradient(left top, rgba(40,40,40,0.90), rgba(20,20,20,0.90));
+    background: -o-linear-gradient(left top, rgba(40,40,40,0.90), rgba(20,20,20,0.90));
+    background: -moz-linear-gradient(left top, rgba(40,40,40,0.90), rgba(20,20,20,0.90));
+
+}
+
+.loginrightmenu {
+
+    height: 75px;
+    width: 100%;
+    position: fixed;
+    z-index: 5;
+}
+
+.logo {
+
+     width: 161px;
+     height: 45px;
+     background: url('/static/image/ch_logo_w.png') center / cover;
+     z-index: 3;
+     position: absolute;
+     left: 50%;
+     margin-left: -80px;
+     margin-top: 80px;
+
+ }
+
+.logoup {
+
+    width: 445px;
+    height: 45px;
+    background: url('/static/image/ch_logo_up_w.png') center / cover;
+    z-index: 3;
+    position: absolute;
+    left: 50%;
+    margin-left: -222.5px;
+    margin-top: 80px;
+
+}
+
+#dates {
+
+    position:absolute;
+    float: left;
+    margin-top: 19px;
+    margin-left: 15px;
+    color: rgba(255,255,255, 0.5);
+}
+
+.copyright {
+    position: absolute;
+    width: 500px;
+    height: 100px;
+    left: 50%;
+    margin-left: -250px;
+    text-align: center;
+    color: rgba(255,255,255, 0.5);
+    bottom: 0;
+}
+
+#times {
+    position:absolute;
+    float: left;
+    margin-top: 37px;
+    margin-left: 15px;
+    font-size:18px;
+    color: rgba(255,255,255, 0.5);
+}
+
+
+.fristfloar {
+
+    width: 100%;
+    height: 100%;
+    position:absolute;
+
+}
+
+.secendfloar {
+
+    display:none;
+    width: 100%;
+    height: 100%;
+    margin-top: 1080px;
+    position:absolute;
+
+}
+
+.profile {
+    display: none;
+}
+
+.challenge {
+    display: none;
+}
+
+.rank {
+    display: none;
+}
+
+.chat {
+    display: none;
+}
+
+.one {
+    float:left;
+    transition: 0.5s;
+}
+
+.two, .three{
+    margin-left: 100px;
+    float:left;
+    transition: 0.5s;
+
+}
+
+
+.four{
+    margin-left: 100px;
+    float:left;
+    transition: 0.5s;
+
+}
+
+
+
+.demo-card-square {
+    border-radius: 0px;
+}
+
+ .demo-card-square.mdl-card {
+     width: 300px;
+     height: 300px;
+ }
+.demo-card-square > .mdl-card__title {
+    color: #fff;
+    background-color: #232323;
+}
+
+.backblur {
+    background-color: rgba(0,0,0,0.6);
+    position: fixed;
+    display: none;
+    z-index: 5;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+}
+
+.alertbox {
+
+    position: fixed;
+    display: none;
+    z-index: 6;
+    width: 700px;
+    height: 400px;
+    background-color: #fff;
+    left: 50%;
+    margin-left: -350px;
+    top: 50%;
+    margin-top: -100px;
+    box-shadow: 0px 1px 25px rgba(0,0,0,0.35);
+    opacity: 0;
+
+}
+
+
+.Login {
+
+    position: absolute;
+    width: 400px;
+    height: 250px;
+    top: 50%;
+    left: 50%;
+    margin-top: -125px;
+    margin-left: -200px;
+    display: none;
+
+}
+
+.userpg {
+    position: absolute;
+    width: 400px;
+    height: 330px;
+    top: 50%;
+    left: 50%;
+    margin-top: -165px;
+    margin-left: -200px;
+}

@@ -1,0 +1,444 @@
+.challenge > .logoup {
+
+    width: 325px;
+    height: 45px;
+    background: url('/static/image/ch_logo_pb_w.png') center / cover;
+    z-index: 3;
+    position: absolute;
+    left: 50%;
+    margin-left: -162.5px;
+    margin-top: 80px;
+
+}
+
+.shearty {
+    margin-top: 100px;
+}
+
+.ang {
+    position: absolute; right: 0; margin-right: 10px; top: 180px; font-family: 'Noto Sans KR', sans-serif;
+}
+
+.rank > .logoup {
+
+    width: 325px;
+    height: 45px;
+    background: url('/static/image/ch_logo_rk_w.png') center / cover;
+    z-index: 3;
+    position: absolute;
+    left: 50%;
+    margin-left: -162.5px;
+    margin-top: 80px;
+
+}
+
+.chat > .logoup {
+
+    width: 325px;
+    height: 45px;
+    background: url('/static/image/ch_logo_ct_w.png') center / cover;
+    z-index: 3;
+    position: absolute;
+    left: 50%;
+    margin-left: -162.5px;
+    margin-top: 80px;
+
+}
+
+#logina {
+
+    float: right;
+    margin-top: 27px;
+    margin-right: 20px;
+    color: rgba(255,255,255, 0.5);
+    transition: 0.2s;
+    cursor: hand;
+}
+
+
+#registera {
+
+    float: right;
+    margin-top: 27px;
+    margin-right: 25px;
+    color: rgba(255,255,255, 0.5);
+    transition: 0.2s;
+    cursor: hand;
+
+}
+
+#logina:hover, #registera:hover {
+    color: rgba(255,64,129, 1);
+}
+
+.main, .challenge, .rank, chat {
+
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: transparent;
+
+}
+
+.con {
+    position: absolute;
+    width: 1500px;
+    height: 300px;
+    top: 50%;
+    margin-top: -150px;
+    left: 50%;
+    margin-left: -750px;
+}
+
+.userpb {
+    position: absolute;
+    width: 1500px;
+    top: 50%;
+    margin-top: -150px;
+    left: 50%;
+    margin-left: -750px;
+}
+
+.userrk {
+
+     position: absolute;
+     width: 400px;
+     top: 50%;
+     margin-top: -150px;
+     left: 50%;
+     margin-left: -200px;
+ }
+
+.userct {
+
+    position: absolute;
+    width: 600px;
+    top: 50%;
+    margin-top: -250px;
+    left: 50%;
+    margin-left: -300px;
+}
+.Register {
+
+    position: absolute;
+    width: 400px;
+    height: 450px;
+    top: 50%;
+    left: 50%;
+    margin-top: -225px;
+    margin-left: -200px;
+    display: none;
+}
+
+.mdl-textfield__input {
+    font-family: 'Noto Sans KR', sans-serif !important;
+    font-size:15px !important;
+    color: #000;
+}
+
+
+
+.pg {
+    color: #fff;
+    font-family: 'Noto Sans KR', sans-serif !important;
+}
+
+.pginput {
+    width: 100%;
+
+}
+
+.pginput2 {
+    border-bottom: 2px solid rgba(255,255,255,0.5);
+    color: #fff;
+}
+
+.pginputitle {
+    color: rgba(255,255,255,0.5);
+}
+
+.backbutton {
+
+     float: right;
+     margin-right: 5px;
+
+ }
+
+.backbuttontext{
+
+    color: rgba(255,255,255,0.5);
+
+}
+
+#changebutton {
+
+    float:right;
+
+}
+
+.accounttext {
+    width: 100%;
+}
+
+
+.toptitle {
+
+    float: left;
+    margin-top: 5px;
+    width: 161px;
+    height: 44px;
+    background: url('/static/image/ch_logo_b.png') center / cover;
+    color: #000;
+
+}
+
+.toptitle2 {
+
+    margin-top: 33px;
+    float: right;
+    font-family: 'Noto Sans KR', sans-serif;
+    font-size:18px;
+    color: #000;
+
+}
+
+.yourname {
+     padding-bottom: 50px;
+ }
+
+#registerbutton {
+
+    float:right;
+
+}
+
+.squaredesign {
+    width: 100%; height: 100px; background-color: transparent; border: 2px solid #fff;     line-height: 100px; font-family: 'Noto Sans KR', sans-serif; font-size:24px; color: #fff;
+    margin-top: 25px;
+    transition: 0.2s;
+    line-height: 70px;
+}
+
+.squaredesign:hover {
+    background-color: #fff;
+    color: #000;
+
+}
+
+.mdl-list__item-primary-content {
+    font-family: 'Noto Sans KR', sans-serif;
+    color: #fff;
+}
+
+.mdl-list__item-icon {
+    background-image: url('ic_account_circle_white_48dp.png');
+    background-size: 100% 100%;
+}
+
+.chatbox {
+    width:600px; height: 500px; overflow:auto; padding: 5px;
+}
+
+.chating {
+    width: 500px;
+}
+
+@media (max-width: 1565px) {
+
+    .main{
+        position: absolute;
+        width: 100%;
+        height: 1200px;
+        background-color: transparent;
+
+
+    }
+
+    .con {
+        position: absolute;
+        width: 900px;
+        height: 700px;
+        top: 50%;
+        margin-top: -350px;
+        left: 50%;
+        margin-left: -350px;
+    }
+
+    .userpb {
+        position: absolute;
+        width: 900px;
+        top: 50%;
+        margin-top: -150px;
+        left: 50%;
+        margin-left: -350px;
+    }
+
+    .userpb > .backbutton {
+margin-right: 200px;
+    }
+
+    .three {
+        margin-left: 0;
+        margin-top: 100px;
+    }
+    .four {
+        margin-top: 100px;
+    }
+}
+
+@media  (max-width: 750px) {
+
+    .main{
+        position: absolute;
+        width: 100%;
+        height: 1750px;
+        background-color: transparent;
+
+
+    }
+
+    .con {
+        position: absolute;
+        width: 300px;
+        height: 1350px;
+        margin-top: -700px;
+        left: 50%;
+        margin-left: -150px;
+    }
+
+    .userpb {
+        position: absolute;
+        width: 300px;
+        top: 50%;
+        margin-top: -150px;
+        left: 50%;
+        margin-left: -150px;
+    }
+
+    .userrk {
+
+        position: absolute;
+        width: 300px;
+        top: 50%;
+        margin-top: -150px;
+        left: 50%;
+        margin-left: -150px;
+    }
+
+    .userct {
+
+        position: absolute;
+        width: 300px;
+        top: 50%;
+        margin-top: -250px;
+        left: 50%;
+        margin-left: -150px;
+    }
+
+    .chating {
+        width: 200px;
+    }
+
+    .chatbox {
+        width:300px; height: 500px; overflow:auto; padding: 5px;
+    }
+
+    .userpb > .backbutton {
+        margin-right: 0px;
+
+    }
+    .one, .two,.three, .four {
+        margin-left: 0;
+        margin-top: 50px;
+    }
+
+    .shearty {
+        margin-top: 50px;
+    }
+
+    #dates, #times {
+
+        display: none;
+
+    }
+
+    .yourname {
+        padding-bottom: 0;
+    }
+}
+
+
+@media screen and (max-width: 1140px) {
+    .loginbackslideshow li div h3 { font-size: 140px }
+}
+
+@media screen and (max-width: 600px) {
+    .loginbackslideshow li div h3 { font-size: 80px }
+}
+
+@media screen and (max-width: 480px) {
+
+    .loginbackslideshow,
+    .loginbackslideshow:after {
+        overflow: hidden;
+        position: fixed;
+        min-height: 760px;
+        width: 100%;
+        height: 100%;
+        top: 0px;
+        left: 0px;
+        z-index: 0;
+        margin-top: 0px;
+    }
+
+    .loginbackslideshow li span {
+        overflow: hidden;
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        top: 0px;
+        left: 0px;
+        color: transparent;
+        background-size: cover;
+        background-position: 50% 50%;
+        background-repeat: none;
+        opacity: 0;
+        z-index: 0;
+        -webkit-backface-visibility: hidden;
+        -webkit-animation: imageAnimation 30s linear infinite 0s;
+        -moz-animation: imageAnimation 30s linear infinite 0s;
+        -o-animation: imageAnimation 30s linear infinite 0s;
+        -ms-animation: imageAnimation 30s linear infinite 0s;
+        animation: imageAnimation 30s linear infinite 0s;
+    }
+
+    .loginbackgroundoverlay {
+
+
+        overflow: hidden;
+        position: fixed;
+        width: 100%;
+        height: 100%;
+        background: rgba(38, 43, 48, 0.90);
+        background: linear-gradient(to bottom right, rgba(38,43,48,0.90), rgba(27,30,33,0.90));
+        background: -webkit-linear-gradient(left top, rgba(38,43,48,0.90), rgba(27,30,33,0.90));
+        background: -o-linear-gradient(left top, rgba(38,43,48,0.90), rgba(27,30,33,0.90));
+        background: -moz-linear-gradient(left top, rgba(38,43,48,0.90), rgba(27,30,33,0.90));
+
+    }
+
+    .Login {
+
+        position: absolute;
+        width: 290px;
+        height: 250px;
+        top: 50%;
+        left: 50%;
+        margin-top: -125px;
+        margin-left: -145px;
+
+    }
+
+
+
+}
